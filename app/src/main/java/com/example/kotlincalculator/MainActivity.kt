@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
 
     fun sub(view:View){
 
-       
+
     }
     fun mult(view:View){
 
