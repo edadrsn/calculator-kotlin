@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D7A0F0"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/titleApp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:layout_marginBottom="50dp"
+        android:fontFamily="cursive"
+        android:text="CALCULATOR"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/numOne"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/numOne"
+        android:layout_width="297dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="18dp"
+        android:background="@drawable/rounded_edittext"
+        android:ems="10"
+        android:hint="Enter 1.Number"
+        android:inputType="number"
+        android:paddingStart="16dp"
+        android:textColor="#000000"
+        android:textColorHint="#3C3B3B"
+        app:layout_constraintBottom_toTopOf="@+id/numTwo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleApp" />
+
+    <EditText
+        android:id="@+id/numTwo"
+        android:layout_width="297dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="25dp"
+        android:background="@drawable/rounded_edittext"
+        android:ems="10"
+        android:hint="Enter 2. Number"
+        android:inputType="number"
+        android:paddingStart="16dp"
+        android:textColor="#000000"
+        android:textColorHint="#3C3B3B"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/numOne" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="276dp"
+        android:layout_height="105dp"
+        android:layout_marginBottom="13dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/txtResult"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/numTwo">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#000000"
+                android:onClick="add"
+                android:text="+"
+                android:textColor="#D7A0F0"
+                android:textSize="20sp"
+                tools:layout_editor_absoluteX="78dp"
+                tools:layout_editor_absoluteY="370dp" />
+
+            <Button
+                android:id="@+id/btnSub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#000000"
+                android:onClick="sub"
+                android:text="-"
+                android:textColor="#D7A0F0"
+                android:textSize="20sp"
+                tools:layout_editor_absoluteX="78dp"
+                tools:layout_editor_absoluteY="370dp" />
+
+            <Button
+                android:id="@+id/btnMult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#000000"
+                android:onClick="mult"
+                android:text="*"
+                android:textColor="#D7A0F0"
+                android:textSize="20sp"
+                tools:layout_editor_absoluteX="78dp"
+                tools:layout_editor_absoluteY="370dp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnDiv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#000000"
+                android:onClick="div"
+                android:text="/"
+                android:textColor="#D7A0F0"
+                android:textSize="20sp"
+                tools:layout_editor_absoluteX="166dp"
+                tools:layout_editor_absoluteY="418dp" />
+
+            <Button
+                android:id="@+id/btnMod"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#000000"
+                android:onClick="mod"
+                android:text="%"
+                android:textColor="#D7A0F0"
+                android:textSize="20sp"
+                tools:layout_editor_absoluteX="166dp"
+                tools:layout_editor_absoluteY="418dp" />
+
+            <Button
+                android:id="@+id/btnReset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:backgroundTint="#000000"
+                android:onClick="reset"
+                android:text="Reset"
+                android:textColor="#D7A0F0"
+                android:textSize="14sp"
+                tools:layout_editor_absoluteX="166dp"
+                tools:layout_editor_absoluteY="418dp" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text=""
+        android:textAlignment="center"
+        android:textColor="#070707"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
