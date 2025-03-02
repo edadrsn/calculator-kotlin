@@ -23,39 +23,61 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
     }
 
     fun add(view: View) {
         number1 = binding.numOne.text.toString().toDoubleOrNull()
         number2 = binding.numTwo.text.toString().toDoubleOrNull()
-        if(number1!=null && number2!=null){
-            result=number1!!+number2!!
-            binding.txtResult.text="RESUL: $result"
-        }
-        else{
-            Toast.makeText(this,"Don't leave empty numbers",Toast.LENGTH_SHORT).show()
+        if (number1 != null && number2 != null) {
+            result = number1!! + number2!!
+            binding.txtResult.text = "RESULT: $result"
+        } else {
+            Toast.makeText(this, "Don't leave empty numbers", Toast.LENGTH_SHORT).show()
         }
     }
 
     fun sub(view: View) {
-        number1=binding.numOne.text.toString().toDoubleOrNull()
-        number2=binding.numTwo.text.toString().toDoubleOrNull()
-        if(number1!=null && number2!=null){
-            result=number1!!-number2!!
-            binding.txtResult.text="RESULT: $result"
+        number1 = binding.numOne.text.toString().toDoubleOrNull()
+        number2 = binding.numTwo.text.toString().toDoubleOrNull()
+        if (number1 != null && number2 != null) {
+            result = number1!! - number2!!
+            binding.txtResult.text = "RESULT: $result"
+        } else {
+            Toast.makeText(this, "Don't leave empty numbers!", Toast.LENGTH_SHORT).show()
         }
-
-
     }
 
     fun mult(view: View) {
-
+        number1 = binding.numOne.text.toString().toDoubleOrNull()
+        number2 = binding.numTwo.text.toString().toDoubleOrNull()
+        if (number1 != null && number2 != null) {
+            result = number1!! * number2!!
+            binding.txtResult.text = "RESULT: $result"
+        } else {
+            Toast.makeText(this, "Don't leave empty numbers!", Toast.LENGTH_SHORT).show()
+        }
     }
 
     fun div(view: View) {
+        number1 = binding.numOne.text.toString().toDoubleOrNull()
+        number2 = binding.numTwo.text.toString().toDoubleOrNull()
+        if (number1 != null && number2 != null) {
+            result = number1!! / number2!!
+            binding.txtResult.text = "RESULT: $result"
+        } else {
+            Toast.makeText(this, "Don't leave empty numbers!", Toast.LENGTH_SHORT).show()
+        }
+    }
 
-
+    fun mod(view: View) {
+        number1 = binding.numOne.text.toString().toDoubleOrNull()
+        number2 = binding.numTwo.text.toString().toDoubleOrNull()
+        if (number1 != null && number2 != null) {
+            result = number1!! % number2!!
+            binding.txtResult.text = "RESULT: $result"
+        } else {
+            Toast.makeText(this, "Don't leave empty numbers!", Toast.LENGTH_SHORT).show()
+        }
     }
 
     fun reset(view: View) {
